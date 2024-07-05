@@ -1,0 +1,159 @@
+// COLOR VARIABLES
+$color-primary: #ff9900;
+$color-primary-light: #f2cb00;
+$color-primary-lighter: #fff856;
+
+$color-secondary: #16205f;
+
+$color-white-1: #fff;
+$color-white-2: #f9f9f9;
+
+$color-grey: #9f9f9f;
+
+// RESPONSIVE BREAKPOINT
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+
+// MARGINS
+.mb-sm {
+  margin-bottom: 1rem;
+}
+.mb-md {
+  margin-bottom: 3rem;
+}
+.mb-lg {
+  margin-bottom: 4rem;
+}
+.mb-hg {
+  margin-bottom: 8rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: $color-secondary;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.container {
+  // max-width: 114rem;
+  // margin: 0.5rem auto;
+}
+
+.heading-1 {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2;
+
+  &__light {
+    color: $color-white-1;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 4rem;
+      text-align: center;
+    }
+  }
+}
+
+.heading-2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  line-height: 1.3;
+
+  span {
+    display: block;
+    margin-top: -0.5rem;
+  }
+}
+
+.heading-3 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+
+.heading-4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  &__light {
+    color: $color-white-1;
+  }
+}
+
+.icon {
+  width: 6rem;
+  height: 6rem;
+  padding: 0.4rem;
+  background-color: $color-primary-lighter;
+  border-radius: 10px;
+}
+
+.btn {
+  border-radius: 5px;
+  border: none;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+
+  // transition: background-image 5s;
+
+  &-colored {
+    color: $color-white-1;
+    box-shadow: 0 1rem 3rem rgba(#000, 0.15);
+
+    background-image: linear-gradient(
+      to right,
+      $color-primary,
+      $color-primary-light
+    );
+    &:hover {
+      background-image: linear-gradient(
+        to right,
+        $color-primary,
+        $color-primary
+      );
+    }
+  }
+
+  &-grey {
+    background-color: #f3f3f3;
+    color: $color-secondary;
+
+    &:hover {
+      box-shadow: 0 1rem 3rem rgba(#000, 0.15);
+    }
+  }
+}
+
+.logo {
+  width: 14rem;
+}

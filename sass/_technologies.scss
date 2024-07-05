@@ -1,0 +1,90 @@
+// TECHNOLOGIES HOME
+.technologies {
+  max-width: 114rem;
+  margin: 0.5rem auto;
+  padding: 8rem 0;
+  text-align: center;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0.5rem 2rem;
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    @media only screen and (max-width: $bp-large) {
+      height: 5rem;
+    }
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+// TECHNOLOGIES PAGE
+.technologies-page {
+  max-width: 114rem;
+  margin: 0.5rem auto;
+  padding: 6rem 0;
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0.5rem 2rem;
+  }
+  &__text {
+    font-size: 1.4rem;
+    width: 33%;
+    margin-bottom: 4rem;
+    @media only screen and (max-width: $bp-medium) {
+      width: 60%;
+    }
+  }
+  &__selectors {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    color: $color-grey;
+    font-weight: 500;
+  }
+
+  &__selector {
+    padding: 0 1.5rem;
+    align-self: center;
+  }
+
+  &__selected {
+    background-color: $color-primary-lighter;
+    color: $color-secondary;
+    font-weight: 600;
+    border-radius: 100px;
+  }
+
+  &__logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+
+    margin: 6rem 0;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 1rem 3rem rgba(#000, 0.12);
+    border-radius: 10px;
+    min-height: 13.8rem;
+  }
+  &__img {
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-width: 95%;
+  }
+}

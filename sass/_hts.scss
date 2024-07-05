@@ -1,0 +1,129 @@
+// HOME PAGE
+
+.hts {
+  width: 100%;
+
+  background-image: linear-gradient(
+    to right,
+    $color-primary,
+    $color-primary-light
+  );
+
+  &__content {
+    max-width: 114rem;
+    margin: 0.5rem auto;
+    padding: 6rem 0;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    width: 30%;
+    margin: 1rem auto 4rem auto;
+    font-weight: 500;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 50%;
+    }
+  }
+
+  &__steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 6rem;
+  }
+
+  &__step {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  &__icon {
+    // width: 12rem;
+    height: 12rem;
+  }
+
+  &__description {
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 0.7;
+
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+
+    span {
+      font-size: 3.6rem;
+      display: block;
+    }
+  }
+}
+
+// HOW TO START PAGE
+.hts-page {
+  max-width: 114rem;
+  margin: 0.5rem auto;
+  padding: 6rem 0;
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0.5rem 2rem;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    width: 33%;
+    margin-bottom: 4rem;
+    @media only screen and (max-width: $bp-medium) {
+      width: 60%;
+    }
+  }
+
+  &__steps {
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-column-gap: 3rem;
+    grid-row-gap: 6rem;
+  }
+
+  &__step {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+
+    grid-column-gap: 2rem;
+    grid-row-gap: 0.5rem;
+  }
+  &__icon {
+    grid-row: 1/-1;
+    grid-column: 1/2;
+  }
+
+  &__description {
+    grid-column: 2/3;
+    margin-top: -3rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  &__qualities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  &__quality {
+    width: 32%;
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 49%;
+    }
+  }
+  &__img {
+    width: 100%;
+    margin-top: 6rem;
+  }
+}
